@@ -1,0 +1,128 @@
+{
+  "questions": [
+    {
+      "question": "Hangi besin grubu en fazla enerji verir?",
+      "audio": "sounds/questions/q1.mp3",
+      "options": [
+        { "text": "Şeker ve tatlılar", "audio": null },
+        { "text": "Sağlıklı sebze ve meyveler", "audio": null },
+        { "text": "Paketlenmiş abur cuburlar", "audio": null }
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Spor yapmak vücudumuzu güçlendirir, kaslarımızı geliştirir ve kalp sağlığını korur. Düzenli fiziksel aktivite yapan kişiler daha sağlıklı ve enerjik olur. Aşağıdakilerden hangisi düzenli spor yapmanın faydalarındandır?",
+      "audio": "sounds/questions/q2.mp3",
+      "options": [
+        { "text": "Kasları güçlendirir ve enerjik yapar", "audio": null },
+        { "text": "Yorgunluk hissini artırır", "audio": null },
+        { "text": "Vücut dengesini bozar", "audio": null}
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kişisel alan, insanların rahat hissetmesi için çevresindeki özel alanıdır. Bu alana izinsiz girmek rahatsızlık verebilir. Kişisel alan neden önemlidir?",
+      "audio": "sounds/questions/q3.mp3",
+      "options": [
+        { "text": "İnsanları daha fazla rahatsız edebilmek için", "audio": null },
+        { "text": "Kendimizi ve başkalarını rahat hissettirmek için", "audio": null },
+        { "text": "Daha çok kişiyle temas etmek için", "audio": null }
+      ],
+      "correct": 1
+    },
+    {
+      "question": "\"Başkalarının eşyaları onların özel alanına girer. Birine ait bir eşyayı kullanmadan önce izin istemek, onun alanına saygı göstermek anlamına gelir. Örneğin, arkadaşımızın kalemini almak istediğimizde önce ona 'Kalemini kullanabilir miyim?' diye sormalıyız.\" Aşağıdaki çocuklardan hangisi doğru davranıyor?",
+      "audio": "sounds/questions/q4.mp3",
+      "options": [
+        { "text": "Arkadaşına \"Kalemini kullanabilir miyim?\" diye soran çocuk.", "audio": null },
+        { "text": "Arkadaşının kalemini izinsiz alan çocuk.", "audio": null },
+        { "text": "Kalemi alıp geri vermeyen çocuk.", "audio": null }
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Yanlış bilgi veren çocuğun seçeneğini işaretleyiniz. Mehmet: \"Araçta emniyet kemeri takmak bizi olası kazalardan korur.\" Selin: \"Emniyet kemeri sadece sürücüler içindir, çocukların takmasına gerek yoktur.\" Tarık: \"Hareket halindeyken araç içinde yerimizden kalkmamalıyız.\"",
+      "audio_parts": [
+        "sounds/questions/q5-qs1.mp3",
+        "sounds/questions/q5-qs2.mp3",
+        "sounds/questions/q5-qs3.mp3"
+      ],
+      "options": [
+        { "text": "Mehmet", "audio": null },
+        { "text": "Selin", "audio": null },
+        { "text": "Tarık", "audio": null }
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Ali: \"Bisiklet sürerken trafik kurallarına uymalıyız.\" Zeynep: \"Bisiklet sürerken kaldırımda gitmek daha iyidir çünkü kurallara uymak zorunda değiliz.\" Kerem: \"Kask takmak, bisiklet sürerken bizi olası kazalardan korur.\" Yanlış bilgi veren çocuk kimdir?",
+      "audio_parts": [
+        "sounds/questions/q6-qs1.mp3",
+        "sounds/questions/q6-qs2.mp3",
+        "sounds/questions/q6-qs3.mp3"
+      ],
+      "options": [
+        { "text": "Ali", "audio": null },
+        { "text": "Zeynep", "audio": null },
+        { "text": "Kerem", "audio": null }
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Doğru bilgi veren çocuğun seçeneğini işaretleyiniz. Ahmet: \"Yangın çıktığında önce dumanın olmadığı bir alana geçmeli ve hızlıca 112'yi aramalıyız.\" Elif: \"Yangın sırasında öncelikle eşyalarımızı kurtarmalı, sonra çıkışa yönelmeliyiz.\" Mert: \"Yangın sırasında asansörü kullanarak hızlıca binadan çıkmalıyız.\"",
+      "audio_parts": [
+        "sounds/questions/q7-qs1.mp3",
+        "sounds/questions/q7-qs2.mp3",
+        "sounds/questions/q7-qs3.mp3"
+      ],
+      "options": [
+        { "text": "Ahmet", "audio": null },
+        { "text": "Elif", "audio": null },
+        { "text": "Mert", "audio": null }
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Yanlış bilgi veren çocuğun seçeneğini işaretleyiniz. Ali: \"Birisi yaralandığında hemen bir yetişkine haber vermeli ve gerekirse 112'yi aramalıyız.\" Elif: \"112'yi sadece oyun oynamak veya meraktan arayabiliriz, çünkü onlar her zaman cevap verir.\" Burak: \"112'yi aradığımızda sakin olmalı, bulunduğumuz yeri ve olayın ne olduğunu açıkça anlatmalıyız.\"",
+      "audio_parts": [
+        "sounds/questions/q8-qs1.mp3",
+        "sounds/questions/q8-qs2.mp3",
+        "sounds/questions/q8-qs3.mp3"
+      ],
+      "options": [
+        { "text": "Ali", "audio": null },
+        { "text": "Elif", "audio": null },
+        { "text": "Burak", "audio": null }
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Doğru bilgi veren çocuğun seçeneğini işaretleyiniz. Burak: \"Ailemle birlikte vakit geçirmek gereksizdir, herkes kendi işini yapmalıdır.\" Elif: \"Ailemizle birlikte oyun oynamak ve sohbet etmek bizi mutlu eder.\" Kerem: \"Aile bireyleri birbirinden uzak durmalı, herkes tek başına zaman geçirmelidir.\"",
+      "audio_parts": [
+        "sounds/questions/q9-qs1.mp3",
+        "sounds/questions/q9-qs2.mp3",
+        "sounds/questions/q9-qs3.mp3"
+      ],
+      "options": [
+        { "text": "Burak", "audio": null },
+        { "text": "Elif", "audio": null },
+        { "text": "Kerem", "audio": null }
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Yanlış bilgi veren çocuğun seçeneğini işaretleyiniz. Deniz: \"Evde sevgi ve saygı içinde yaşamak, aile bağlarımızı güçlendirir.\" Ayça: \"Ben ailemle vakit geçirmek zorunda değilim, herkes kendi başına yaşamalıdır.\" Kerem: \"Aile bireyleri arasında dayanışma olursa herkes daha mutlu olur.\"",
+      "audio_parts": [
+        "sounds/questions/q10-qs1.mp3",
+        "sounds/questions/q10-qs2.mp3",
+        "sounds/questions/q10-qs3.mp3"
+      ],
+      "options": [
+        { "text": "Deniz", "audio": null },
+        { "text": "Ayça", "audio": null },
+        { "text": "Kerem", "audio": null }
+      ],
+      "correct": 1
+    }
+  ]
+}
