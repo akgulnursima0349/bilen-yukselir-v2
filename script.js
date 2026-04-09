@@ -87,11 +87,23 @@ function stopQuestionAudio() {
     }
 }
 
-function createAudioBtn(audioPath, label) {
+function createAudioBtn(audioPath, label, icon = null) {
     const btn = document.createElement('button');
     btn.className = 'audio-btn';
     btn.setAttribute('aria-label', 'Sesli dinle');
-    btn.textContent = label != null ? `🔊 ${label}` : '🔊';
+
+    if (icon) {
+        const img = document.createElement('img');
+        img.src = icon;
+        img.className = 'audio-btn-icon';
+        img.alt = '';
+        btn.appendChild(img);
+    } else {
+        btn.appendChild(Object.assign(document.createElement('span'), { textContent: '🔊' }));
+    }
+    if (label != null) {
+        btn.appendChild(Object.assign(document.createElement('span'), { textContent: ' ' + label }));
+    }
     btn.addEventListener('click', (e) => {
         e.stopPropagation();
         stopQuestionAudio();
@@ -494,7 +506,8 @@ function showQuestion() {
         currentQuestion.audio_parts.forEach((part, i) => {
             const path = typeof part === 'object' ? part.audio : part;
             const label = typeof part === 'object' && part.label ? part.label : i + 1;
-            if (path) partsDiv.appendChild(createAudioBtn(path, label));
+            const icon = typeof part === 'object' ? part.icon || null : null;
+            if (path) partsDiv.appendChild(createAudioBtn(path, label, icon));
         });
         optionsGrid.parentNode.insertBefore(partsDiv, optionsGrid);
     }

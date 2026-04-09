@@ -508,6 +508,19 @@ body {
     border-color: #2ECC71;
 }
 
+/* Ses butonu içindeki karakter görseli */
+.audio-btn-icon {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+    display: block;
+    flex-shrink: 0;
+}
+.audio-parts-area .audio-btn-icon {
+    width: 26px;
+    height: 26px;
+}
+
 /* Konuşma balonları — numaralı butonlar */
 .audio-parts-area {
     display: flex;
