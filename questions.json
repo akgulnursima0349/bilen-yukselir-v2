@@ -43,9 +43,9 @@
     {
       "question": "Yanlış bilgi veren çocuğun seçeneğini işaretleyiniz. Mehmet: \"Araçta emniyet kemeri takmak bizi olası kazalardan korur.\" Selin: \"Emniyet kemeri sadece sürücüler içindir, çocukların takmasına gerek yoktur.\" Tarık: \"Hareket halindeyken araç içinde yerimizden kalkmamalıyız.\"",
       "audio_parts": [
-        "sounds/questions/q5-qs1.mp3",
-        "sounds/questions/q5-qs2.mp3",
-        "sounds/questions/q5-qs3.mp3"
+        { "audio": "sounds/questions/q5-qs1.mp3", "label": "Mehmet" },
+        { "audio": "sounds/questions/q5-qs2.mp3", "label": "Selin" },
+        { "audio": "sounds/questions/q5-qs3.mp3", "label": "Tarık" }
       ],
       "options": [
         { "text": "Mehmet", "audio": null },
@@ -57,9 +57,9 @@
     {
       "question": "Ali: \"Bisiklet sürerken trafik kurallarına uymalıyız.\" Zeynep: \"Bisiklet sürerken kaldırımda gitmek daha iyidir çünkü kurallara uymak zorunda değiliz.\" Kerem: \"Kask takmak, bisiklet sürerken bizi olası kazalardan korur.\" Yanlış bilgi veren çocuk kimdir?",
       "audio_parts": [
-        "sounds/questions/q6-qs1.mp3",
-        "sounds/questions/q6-qs2.mp3",
-        "sounds/questions/q6-qs3.mp3"
+        { "audio": "sounds/questions/q6-qs1.mp3", "label": "Ali" },
+        { "audio": "sounds/questions/q6-qs2.mp3", "label": "Zeynep" },
+        { "audio": "sounds/questions/q6-qs3.mp3", "label": "Kerem" }
       ],
       "options": [
         { "text": "Ali", "audio": null },
@@ -71,9 +71,9 @@
     {
       "question": "Doğru bilgi veren çocuğun seçeneğini işaretleyiniz. Ahmet: \"Yangın çıktığında önce dumanın olmadığı bir alana geçmeli ve hızlıca 112'yi aramalıyız.\" Elif: \"Yangın sırasında öncelikle eşyalarımızı kurtarmalı, sonra çıkışa yönelmeliyiz.\" Mert: \"Yangın sırasında asansörü kullanarak hızlıca binadan çıkmalıyız.\"",
       "audio_parts": [
-        "sounds/questions/q7-qs1.mp3",
-        "sounds/questions/q7-qs2.mp3",
-        "sounds/questions/q7-qs3.mp3"
+        { "audio": "sounds/questions/q7-qs1.mp3", "label": "Ahmet" },
+        { "audio": "sounds/questions/q7-qs2.mp3", "label": "Elif" },
+        { "audio": "sounds/questions/q7-qs3.mp3", "label": "Mert" }
       ],
       "options": [
         { "text": "Ahmet", "audio": null },
@@ -85,9 +85,9 @@
     {
       "question": "Yanlış bilgi veren çocuğun seçeneğini işaretleyiniz. Ali: \"Birisi yaralandığında hemen bir yetişkine haber vermeli ve gerekirse 112'yi aramalıyız.\" Elif: \"112'yi sadece oyun oynamak veya meraktan arayabiliriz, çünkü onlar her zaman cevap verir.\" Burak: \"112'yi aradığımızda sakin olmalı, bulunduğumuz yeri ve olayın ne olduğunu açıkça anlatmalıyız.\"",
       "audio_parts": [
-        "sounds/questions/q8-qs1.mp3",
-        "sounds/questions/q8-qs2.mp3",
-        "sounds/questions/q8-qs3.mp3"
+        { "audio": "sounds/questions/q8-qs1.mp3", "label": "Ali" },
+        { "audio": "sounds/questions/q8-qs2.mp3", "label": "Elif" },
+        { "audio": "sounds/questions/q8-qs3.mp3", "label": "Burak" }
       ],
       "options": [
         { "text": "Ali", "audio": null },
@@ -99,9 +99,9 @@
     {
       "question": "Doğru bilgi veren çocuğun seçeneğini işaretleyiniz. Burak: \"Ailemle birlikte vakit geçirmek gereksizdir, herkes kendi işini yapmalıdır.\" Elif: \"Ailemizle birlikte oyun oynamak ve sohbet etmek bizi mutlu eder.\" Kerem: \"Aile bireyleri birbirinden uzak durmalı, herkes tek başına zaman geçirmelidir.\"",
       "audio_parts": [
-        "sounds/questions/q9-qs1.mp3",
-        "sounds/questions/q9-qs2.mp3",
-        "sounds/questions/q9-qs3.mp3"
+        { "audio": "sounds/questions/q9-qs1.mp3", "label": "Burak" },
+        { "audio": "sounds/questions/q9-qs2.mp3", "label": "Elif" },
+        { "audio": "sounds/questions/q9-qs3.mp3", "label": "Kerem" }
       ],
       "options": [
         { "text": "Burak", "audio": null },
@@ -113,9 +113,9 @@
     {
       "question": "Yanlış bilgi veren çocuğun seçeneğini işaretleyiniz. Deniz: \"Evde sevgi ve saygı içinde yaşamak, aile bağlarımızı güçlendirir.\" Ayça: \"Ben ailemle vakit geçirmek zorunda değilim, herkes kendi başına yaşamalıdır.\" Kerem: \"Aile bireyleri arasında dayanışma olursa herkes daha mutlu olur.\"",
       "audio_parts": [
-        "sounds/questions/q10-qs1.mp3",
-        "sounds/questions/q10-qs2.mp3",
-        "sounds/questions/q10-qs3.mp3"
+        { "audio": "sounds/questions/q10-qs1.mp3", "label": "Deniz" },
+        { "audio": "sounds/questions/q10-qs2.mp3", "label": "Ayça" },
+        { "audio": "sounds/questions/q10-qs3.mp3", "label": "Kerem" }
       ],
       "options": [
         { "text": "Deniz", "audio": null },

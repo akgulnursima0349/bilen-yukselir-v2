@@ -491,8 +491,10 @@ function showQuestion() {
     if (currentQuestion.audio_parts && currentQuestion.audio_parts.length > 0) {
         const partsDiv = document.createElement('div');
         partsDiv.className = 'audio-parts-area';
-        currentQuestion.audio_parts.forEach((path, i) => {
-            if (path) partsDiv.appendChild(createAudioBtn(path, i + 1));
+        currentQuestion.audio_parts.forEach((part, i) => {
+            const path = typeof part === 'object' ? part.audio : part;
+            const label = typeof part === 'object' && part.label ? part.label : i + 1;
+            if (path) partsDiv.appendChild(createAudioBtn(path, label));
         });
         optionsGrid.parentNode.insertBefore(partsDiv, optionsGrid);
     }
