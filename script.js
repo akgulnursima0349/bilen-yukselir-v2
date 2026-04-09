@@ -87,6 +87,35 @@ function stopQuestionAudio() {
     }
 }
 
+// Bir ses dosyasının süresini saniye olarak döndürür (async)
+function getAudioDuration(path) {
+    return new Promise(resolve => {
+        const audio = new Audio(path);
+        audio.addEventListener('loadedmetadata', () => resolve(audio.duration || 0));
+        audio.addEventListener('error', () => resolve(0));
+        setTimeout(() => resolve(0), 4000); // 4 saniye içinde yüklenemezse 0 döndür
+    });
+}
+
+// Sorudaki tüm ses dosyalarının toplam süresini hesaplar (async)
+async function getQuestionAudioDuration(question) {
+    const paths = [];
+
+    if (question.audio) paths.push(question.audio);
+
+    if (question.audio_parts) {
+        question.audio_parts.forEach(part => {
+            const p = typeof part === 'object' ? part.audio : part;
+            if (p) paths.push(p);
+        });
+    }
+
+    if (paths.length === 0) return 0;
+
+    const durations = await Promise.all(paths.map(getAudioDuration));
+    return durations.reduce((sum, d) => sum + d, 0);
+}
+
 function createAudioBtn(audioPath, label, icon = null) {
     const btn = document.createElement('button');
     btn.className = 'audio-btn';
@@ -175,6 +204,7 @@ let usedQuestions = [];
 let currentQuestion = null;
 let timerInterval = null;
 let timeLeft = 10;
+let totalTime = 10;
 
 // ============================================
 // ESNEK SORU SİSTEMİ
@@ -549,28 +579,47 @@ function showQuestion() {
         optionsGrid.appendChild(btn);
     });
 
-    timeLeft = 10;
-    timerValue.textContent = '10';
+    // Süreyi başlangıçta sıfırla, modal göster; gerçek süre hesaplanınca timer başlar
+    timerValue.textContent = '…';
     timerValue.classList.remove('warning');
     timerIcon.classList.remove('warning');
     timerProgressFill.style.width = '100%';
     timerProgressFill.classList.remove('warning');
-
     questionModal.classList.remove('hidden');
+
+    startTimer(currentQuestion);
+}
+
+// Soruya göre dinamik süreyi hesaplar ve sayacı başlatır
+async function startTimer(question) {
+    const THINKING_BUFFER = question.thinkingTime ?? 3; // varsayılan 3 sn düşünme süresi
+    const MIN_TIME = 5;                                  // en az 5 saniye
+
+    const audioDuration = await getQuestionAudioDuration(question);
+    const computed = audioDuration > 0
+        ? Math.ceil(audioDuration) + THINKING_BUFFER
+        : 10; // ses yoksa sabit 10 saniye
+    totalTime = Math.max(MIN_TIME, computed);
+    timeLeft = totalTime;
+
+    const warningThreshold = Math.min(3, totalTime * 0.25); // son %25 veya 3 sn (hangisi küçükse)
+
+    timerValue.textContent = String(Math.ceil(timeLeft));
+    timerProgressFill.style.width = '100%';
 
     clearInterval(timerInterval);
     timerInterval = setInterval(() => {
         timeLeft -= 0.1;
-        const percentage = (timeLeft / 10) * 100;
+        const percentage = (timeLeft / totalTime) * 100;
         timerProgressFill.style.width = `${percentage}%`;
         timerValue.textContent = Math.ceil(timeLeft);
 
-        // Her saniye tick sesi
+        // Her saniye tick sesi (son 5 saniye)
         if (Math.ceil(timeLeft) !== Math.ceil(timeLeft + 0.1) && timeLeft > 0 && timeLeft <= 5) {
             SoundManager.play('tick', 0.3);
         }
 
-        if (timeLeft <= 3) {
+        if (timeLeft <= warningThreshold) {
             timerValue.classList.add('warning');
             timerIcon.classList.add('warning');
             timerProgressFill.classList.add('warning');
@@ -579,7 +628,7 @@ function showQuestion() {
         if (timeLeft <= 0) {
             clearInterval(timerInterval);
             timeLeft = 0;
-            timerValue.textContent = "0";
+            timerValue.textContent = '0';
             stopQuestionAudio();
             SoundManager.play('wrong', 0.6);
         }

@@ -196,7 +196,33 @@ Tüm alanlar aynı anda kullanılabilir:
 
 ---
 
-## 9. Dosya isimlendirme önerileri
+## 9. Soru süresi (dinamik timer)
+
+Oyun süresi her soru için otomatik hesaplanır:
+
+```
+toplam süre = (tüm ses dosyalarının süresi) + thinkingTime
+```
+
+- Ses dosyası yoksa süre sabit **10 saniye**dir.
+- `thinkingTime` yazılmazsa varsayılan **3 saniye** eklenir.
+- Hesaplanan süre 5 saniyenin altına düşemez.
+
+Belirli bir soru için düşünme süresini özelleştirmek istiyorsanız:
+
+```json
+{
+  "question": "Uzun bir soru metni...",
+  "audio": "sounds/questions/q1.mp3",
+  "thinkingTime": 5,
+  "options": ["A", "B", "C"],
+  "correct": 0
+}
+```
+
+---
+
+## 10. Dosya isimlendirme önerileri
 
 ```
 sounds/questions/q1.mp3         → 1. sorunun sesi
@@ -211,7 +237,7 @@ Assets/icons/kiz_cocuk.png      → Ses butonu için kız çocuk ikonu
 
 ---
 
-## 10. Hızlı başvuru tablosu
+## 11. Hızlı başvuru tablosu
 
 | Alan | Nerede | Zorunlu | Ne yapar |
 |------|--------|---------|----------|
@@ -219,6 +245,7 @@ Assets/icons/kiz_cocuk.png      → Ses butonu için kız çocuk ikonu
 | `correct` | Soru | ✅ | Doğru şıkkın indeksi (0/1/2) |
 | `options` | Soru | ✅ | Şık listesi |
 | `audio` | Soru | ❌ | Soru ses butonu (🔊) |
+| `thinkingTime` | Soru | ❌ | Ses bittikten sonra eklenen düşünme süresi (saniye). Varsayılan: 3 |
 | `questionImage` | Soru | ❌ | Soru görseli |
 | `audio_parts` | Soru | ❌ | Diyalog ses butonları dizisi |
 | `audio_parts[].audio` | Diyalog parçası | ✅* | Parçanın ses dosyası |
